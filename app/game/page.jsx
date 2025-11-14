@@ -1,22 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-// Import 'Users' and 'Sparkles' for the new cards, plus all original icons
-import { 
-  Gamepad2, 
-  Sparkles, 
-  Zap, 
-  Trees, 
-  Users, // Used for Login
-  Recycle, 
-  Globe, 
-  School, 
-  GraduationCap 
-} from 'lucide-react';
+import { Gamepad2, Sparkles, Zap, Trees, Users, Recycle, Globe, School, GraduationCap } from 'lucide-react';
 
-// 
-// --- PIXEL CARD COMPONENT (Copied Verbatim) ---
-// This component is identical to your original
-//
 const PixelCard = ({ title, icon: Icon, games, delay, category }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showGames, setShowGames] = useState(false);
@@ -54,7 +39,7 @@ const PixelCard = ({ title, icon: Icon, games, delay, category }) => {
         <div className={`absolute top-2 left-2 text-xs font-bold ${
           category === 'school' ? 'text-green-300' : 'text-purple-300'
         } tracking-wider pixel-text`}>
-          {category === 'school' ? 'PLAYER' : 'NEW CHALLENGER'}
+          {category === 'school' ? 'SCHOOL LVL' : 'COLLEGE LVL'}
         </div>
 
         <div className="flex flex-col items-center space-y-4">
@@ -125,9 +110,6 @@ const PixelCard = ({ title, icon: Icon, games, delay, category }) => {
   );
 };
 
-//
-// --- FLOATING PARTICLE COMPONENT (Copied Verbatim) ---
-//
 const FloatingParticle = ({ delay, duration, color }) => (
   <div
     className="absolute w-2 h-2 rounded-sm opacity-60"
@@ -142,14 +124,10 @@ const FloatingParticle = ({ delay, duration, color }) => (
   ></div>
 );
 
-//
-// --- NEW AUTH LANDING PAGE ---
-//
-export default function AuthLandingPage() {
+export default function SustainabilityGameLanding() {
   const [glitchActive, setGlitchActive] = useState(false);
   const [score, setScore] = useState(0);
 
-  // All effects are kept for the identical look and feel
   useEffect(() => {
     const glitchInterval = setInterval(() => {
       setGlitchActive(true);
@@ -166,22 +144,21 @@ export default function AuthLandingPage() {
     };
   }, []);
 
-  // --- CONTENT MODIFICATION ---
-  // Define actions for Login and Sign Up.
-  // The 'route' now points to '/game', where your original page will live.
-  const loginActions = [
-    { name: "ENTER GAME", route: "/game" },
+  const schoolGames = [
+    { name: "RAINFOREST RESCUE", route: "/rainforest2" },
+    { name: "PRESIDENT CHALLENGE", route: "/president" },
+    { name: "PRESIDENT 2.0", route: "/president2" }
   ];
 
-  const signupActions = [
-    { name: "CREATE PLAYER", route: "/game" },
+  const collegeGames = [
+    { name: "HACK PLANET", route: "/hackplanet" },
+    { name: "HACK PLANET 2", route: "/hackplanet2" },
+    { name: "WASTE HACK", route: "/wastehack" }
   ];
-  // --- END CONTENT MODIFICATION ---
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden relative">
       <style jsx>{`
-        /* All styles are copied verbatim */
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
         
         .pixel-text {
@@ -248,7 +225,7 @@ export default function AuthLandingPage() {
         }
       `}</style>
 
-      {/* Floating Particles (identical) */}
+      {/* Floating Particles */}
       {[...Array(30)].map((_, i) => (
         <FloatingParticle
           key={i}
@@ -258,12 +235,12 @@ export default function AuthLandingPage() {
         />
       ))}
 
-      {/* Scan Line Effect (identical) */}
+      {/* Scan Line Effect */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="scan-line absolute w-full h-1 bg-gradient-to-r from-transparent via-purple-500/30 to-transparent"></div>
       </div>
 
-      {/* Grid Background (identical) */}
+      {/* Grid Background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `
@@ -274,7 +251,7 @@ export default function AuthLandingPage() {
         }}></div>
       </div>
 
-      {/* Top Bar (identical) */}
+      {/* Top Bar */}
       <div className="absolute top-0 left-0 right-0 bg-black/40 backdrop-blur-sm border-b-4 border-purple-500 p-4 z-10">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -300,8 +277,7 @@ export default function AuthLandingPage() {
       {/* Main Content */}
       <div className="relative z-10 pt-32 pb-20 px-8">
         <div className="max-w-7xl mx-auto">
-          
-          {/* --- HERO SECTION (Modified) --- */}
+          {/* Hero Section */}
           <div className="text-center mb-20 space-y-6">
             <div className="flex justify-center space-x-4 mb-8">
               <Gamepad2 className="w-16 h-16 text-green-400 animate-bounce" style={{ animationDelay: '0s' }} />
@@ -310,11 +286,11 @@ export default function AuthLandingPage() {
             </div>
             
             <h2 className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-purple-400 to-pink-400 pixel-text mb-6 animate-pulse">
-              AUTHENTICATION
+              CHOOSE YOUR LEVEL
             </h2>
             
             <p className="text-2xl text-purple-300 pixel-text max-w-3xl mx-auto leading-relaxed">
-              LOGIN OR SIGN UP TO PLAY.
+              SAVE THE PLANET. ONE GAME AT A TIME.
             </p>
 
             <div className="flex justify-center space-x-4 mt-8">
@@ -330,31 +306,27 @@ export default function AuthLandingPage() {
               ))}
             </div>
           </div>
-          {/* --- END HERO SECTION --- */}
 
-
-          {/* --- CARDS GRID (Modified) --- */}
+          {/* Cards Grid */}
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <PixelCard
-              title="PLAYER LOGIN"
-              icon={Users}
-              games={loginActions}
+              title="SCHOOL ZONE"
+              icon={School}
+              games={schoolGames}
               delay={0}
               category="school"
             />
             
             <PixelCard
-              title="NEW PLAYER"
-              icon={Sparkles}
-              games={signupActions}
+              title="COLLEGE ARENA"
+              icon={GraduationCap}
+              games={collegeGames}
               delay={0.5}
               category="college"
             />
           </div>
-          {/* --- END CARDS GRID --- */}
 
-
-          {/* Bottom Stats (identical) */}
+          {/* Bottom Stats */}
           <div className="mt-20 grid grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               { icon: Users, label: 'PLAYERS', value: '999+', color: 'text-green-400' },
@@ -386,7 +358,7 @@ export default function AuthLandingPage() {
         </div>
       </div>
 
-      {/* Corner Decorations (identical) */}
+      {/* Corner Decorations */}
       <div className="absolute top-20 left-8 w-16 h-16 border-t-4 border-l-4 border-green-400 opacity-50"></div>
       <div className="absolute top-20 right-8 w-16 h-16 border-t-4 border-r-4 border-purple-400 opacity-50"></div>
       <div className="absolute bottom-8 left-8 w-16 h-16 border-b-4 border-l-4 border-pink-400 opacity-50"></div>
