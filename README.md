@@ -13,34 +13,34 @@ This project is a gamified educational platform focused on environmental conserv
 #### Explore Rainforest (3D)
 Navigate a 3D rainforest environment, click on objects to learn about wildlife and conservation.
 
-![Explore Rainforest Gameplay](public/readme/rainforest.jpg)
+![Explore Rainforest Gameplay](public/readme/rainforest.png)
 
 #### President Challenge
 Make environmental policy decisions as a president and see the impact of your choices.
 
-![President Challenge Gameplay](public/readme/president.jpg)
+![President Challenge Gameplay](public/readme/president.png)
 
 #### President Challenge 2.0
 An advanced version of the President Challenge with more complex scenarios.
 
-![President Challenge 2.0 Gameplay](public/readme/president2.jpg)
+![President Challenge 2.0 Gameplay](public/readme/president2.png)
 
 ### College Level
 
 #### Hack Planet (Coding Game)
 Write JavaScript algorithms to clean polluted environments.
 
-![Hack Planet Gameplay](public/readme/hackplanet.jpg)
+![Hack Planet Gameplay](public/readme/hackplanet.png)
 
 #### Hack Planet 2 (Advanced Coding)
 More complex coding challenges for environmental cleanup.
 
-![Hack Planet 2 Gameplay](public/readme/hackplanet2.jpg)
+![Hack Planet 2 Gameplay](public/readme/hackplanet2.png)
 
 #### Waste Hack (Sorting Game)
 Write algorithms to sort different types of waste materials and create upcycled items.
 
-![Waste Hack Gameplay](public/readme/wastehack.jpg)
+![Waste Hack Gameplay](public/readme/wastehack.png)
 
 ---
 
