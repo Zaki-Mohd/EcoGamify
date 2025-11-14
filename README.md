@@ -2,10 +2,11 @@
 
 ## We won the hackathon!
 
-![Group Picture](public/readme/grouppic.jpg)
+<p align="center">
+  <img src="public/readme/grouppic.jpg" width="500"/>
+</p>
 
 This project is a gamified educational platform focused on environmental conservation. It was created for a hackathon and includes a variety of games designed for different age groups and skill levels.
-
 ## Games
 
 ### School Level
